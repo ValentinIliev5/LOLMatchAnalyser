@@ -24,6 +24,11 @@ public class AccountsHolder {
         this.accounts.add(new AccountInfo("ok6og","EUNE"));
         this.accounts.add(new AccountInfo("Overlord474","EUNE"));
         this.accounts.add(new AccountInfo("Trolge","EUNE"));
+        this.accounts.add(new AccountInfo("Lisara","AYAYA"));
+        this.accounts.add(new AccountInfo("Josyuker","Joker"));
+        this.accounts.add(new AccountInfo("Killer","BQG1"));
+        this.accounts.add(new AccountInfo("Veskin","2121"));
+        this.accounts.add(new AccountInfo("NoWardJustBard","2106"));
     }
     public void addAccount(AccountInfo accountInfo){
         this.accounts.add(accountInfo);

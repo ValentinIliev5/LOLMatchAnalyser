@@ -37,7 +37,16 @@ public class MatchService {
 
     public JsonNode getMatchesIDs(String userPUUID,int startNumber) throws IOException {
        HttpURLConnection connection = (HttpURLConnection) formAllMatchesURL(userPUUID,startNumber).openConnection();
-       connection.setRequestMethod("GET");
+        return getJsonNode(connection);
+    }
+
+
+    public JsonNode readMatchData(String matchID) throws IOException {
+        HttpURLConnection connection = (HttpURLConnection) formGetMatchDetailsURL(matchID).openConnection();
+        return getJsonNode(connection);
+    }
+    private static JsonNode getJsonNode(HttpURLConnection connection) throws IOException {
+        connection.setRequestMethod("GET");
 
         int responseCode = connection.getResponseCode();
         JsonNode jsonNode = null;
